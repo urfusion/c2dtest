@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule ^media/(.*) http://%{HTTP_HOST}/files/timthumb.php?src=http://%{HTTP_HOST}/app/webroot/files/$1 [L,R=301]
+   RewriteRule    ^$ app/webroot/    [L]
+   RewriteRule    (.*) app/webroot/$1 [L]
+</IfModule>
+
+    
